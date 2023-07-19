@@ -1,0 +1,41 @@
+.addtask {
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  padding-left: 30%;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  background-color: aqua;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.slide-in-component {
+  position: fixed;
+  top: 0;
+  right: -33.33%; /* Start position: completely hidden on the right side */
+  width: 33.33%; /* Width: covers 1/3rd of the screen */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f0f0f0;
+  transition: right 0.3s ease-in-out; /* Animation duration and easing */
+}
+
+.slide-in-component.open {
+  right: 0; /* Slide in from the right side */
+}
+
+.toggle-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 2; /* Make the button clickable above the slide-in component */
+}
+
+.content {
+  padding: 20px;
+}
